@@ -15,3 +15,5 @@
 - [Prop-types](https://www.npmjs.com/package/prop-types)
 
 - [Movie] api (https://www.themoviedb.org/settings/api)
+
+- ESLint[config] (https://www.npmjs.com/package/eslint-config-airbnb)
