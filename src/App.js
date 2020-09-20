@@ -13,7 +13,7 @@ class App extends Component {
 	async componentDidMount() {
 		try {
 			const res = await fetch(
-				'https://api.themoviedb.org/3/discover/movie?api_key=c17f6dffb2c1560dc3cef67bed771111&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1',
+				`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`,
 			);
 			const movies = await res.json();
 			this.setState({
@@ -25,7 +25,6 @@ class App extends Component {
 	}
 
 	render() {
-		// console.log(this.state.movies)
 		return (
 			<div className="App">
 				<header className="App-header">
