@@ -1,12 +1,8 @@
 /* eslint-disable-line/no-did-mount-set-state: 0 */
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
-
 import Movie from './Movie';
 
-class App extends Component {
+class MoviesList extends Component {
 	state = {
 		movies: [],
 	};
@@ -29,12 +25,6 @@ class App extends Component {
 		return (
 			<Router>
 				<div className="App">
-					<header className="App-header">
-						<img src={logo} className="App-logo" alt="logo" />
-					</header>
-					<Switch>
-						<Route path="/test" component={Test} />
-					</Switch>
 					{this.state.movies.map((movie) => (
 						<Movie movie={movie} key={movie.id} />
 					))}
@@ -44,6 +34,4 @@ class App extends Component {
 	}
 }
 
-export default App;
-
-const Test = () => <h1>TEST</h1>;
+export default MoviesList;
