@@ -6,8 +6,6 @@
 
 ## Resources
 
-- [Walkthroughs](https://www.leveluptutorials.com/tutorials/react-16-for-everyone/static-defaultprops-and-proptypes)
-
 - [Removing] branches (https://www.educative.io/edpresso/how-to-delete-remote-branches-in-git)
 
 - [Merging] branches (https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
