@@ -1,6 +1,7 @@
 /* eslint-disable-line/no-did-mount-set-state: 0 */
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Overdrive from 'react-overdrive';
 
 import { Poster } from './Movie';
 
@@ -31,10 +32,12 @@ class MoviesDetail extends Component {
 		return (
 			<MovieWrapper backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
 				<MovieInfo>
+        <Overdrive id={movie.id}>
 					<Poster
 						src={`${POSTER_PATH}${movie.poster_path}`}
 						alt={movie.title}
 					/>
+        </Overdrive>
 					<div>
 						<h1>{this.state.movie.title}</h1>
 						<h3>{this.state.movie.release_date}</h3>
