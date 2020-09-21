@@ -23,13 +23,11 @@ class MoviesList extends Component {
 
 	render() {
 		return (
-			<Router>
 				<div className="App">
 					{this.state.movies.map((movie) => (
 						<Movie movie={movie} key={movie.id} />
 					))}
 				</div>
-			</Router>
 		);
 	}
 }
