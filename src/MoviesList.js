@@ -1,5 +1,7 @@
 /* eslint-disable-line/no-did-mount-set-state: 0 */
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
 import Movie from './Movie';
 
 class MoviesList extends Component {
@@ -23,13 +25,20 @@ class MoviesList extends Component {
 
 	render() {
 		return (
-				<div className="App">
-					{this.state.movies.map((movie) => (
-						<Movie movie={movie} key={movie.id} />
-					))}
-				</div>
+			<MovieGrid className="App">
+				{this.state.movies.map((movie) => (
+					<Movie movie={movie} key={movie.id} />
+				))}
+			</MovieGrid>
 		);
 	}
 }
 
 export default MoviesList;
+
+const MovieGrid = styled.div`
+	display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-row-gap: 1rem;
+`;
