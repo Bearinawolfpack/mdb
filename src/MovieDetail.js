@@ -40,9 +40,10 @@ class MoviesDetail extends Component {
 						/>
 					</Overdrive>
 					<div>
-						{this.state.movie.title ? <h1>Hello</h1> : <h1>Hi</h1>}
-						<h3>{this.state.movie.release_date}</h3>
-						<p>{this.state.movie.overview}</p>
+						{movie.title ? <h1>Hello</h1> : <h1>Hi</h1>}
+						<h1>{movie.title}</h1>
+						<h3>{movie.release_date}</h3>
+						<p>{movie.overview}</p>
 					</div>
 				</MovieInfo>
 			</MovieWrapper>
